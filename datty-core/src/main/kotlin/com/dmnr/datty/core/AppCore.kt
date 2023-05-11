@@ -1,5 +1,8 @@
 package com.dmnr.datty.core
 
+import com.dmnr.datty.core.source.data.HeaderTableSource
+import com.dmnr.datty.core.source.data.TitleSource
+import com.lowagie.text.Chunk
 import com.lowagie.text.Document
 import com.lowagie.text.Paragraph
 import com.lowagie.text.pdf.PdfWriter
@@ -21,9 +24,13 @@ fun main() {
     myPDFDoc.apply {
         open() // Open the Document
         TitleSource.insertData()
-                    .forEach { add(it) }
-
-
+            .forEach { add(it) }
+        add(Paragraph(Chunk.NEWLINE))
+        add(HeaderTableSource.createTable())
+        add(Paragraph(Chunk.NEWLINE))
+        add(HeaderTableSource.createTableWithStudentInfo())
+        add(Paragraph(Chunk.NEWLINE))
+        add(HeaderTableSource.getOtherTable())
         // Add a text within a Paragraph
         // (we can add objects from classes
         // implementing the interface com.lowagie.text.Element )
