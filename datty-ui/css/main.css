@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: [first] 40px [line2] 10% [line3] auto [line4] 10% [five] 40px [end];
   grid-template-rows: [row1-start] 20% [row1-end] 20px [third-line] auto [last-line];
+  width: 60%;
+  margin: 0 auto;
+  height: 600px;
 }
 .container {
   display: inline-grid;
@@ -10,10 +13,12 @@
   grid-column-end: span five;
   grid-row-start: 2;
   grid-row-end: span 2;
+  height: 30px;
 }
 .cell {
-  padding: 10px;
+  font-size: 2fr;
   border: 1px solid #000;
+  text-align: left;
 }
 .cell:nth-child(odd) {
   background-color: gray;
@@ -23,21 +28,23 @@
 .gallery__item--1{ 
   grid-column: line2 /span 1;
   grid-row: row1-start;
+  margin: 0 20;
 }
 .gallery__item--2{ 
   grid-column: line4 /span 1;
   grid-row: row1-start;
+  margin-left: 0;
 }
 .item-center{
   grid-column: line3 /span 1;
   grid-row: row1-start;
+  font-size: 1vw;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
-#item-center > div{
-  font-size: 4vw;
-  padding: 8px;
-}
+
 .gallery__img {
   width: 30;
   height: 100%;
   object-fit: cover;
+  margin: 0;
 }
