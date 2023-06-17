@@ -1,7 +1,7 @@
 .main-container{
   display: grid;
   grid-template-columns: [first]25%[line2] 10% [line3] auto [line4] 10% [five] 25% [end];
-  grid-template-rows: [row1-start] 20% [row1-end] 20px [third-line] auto [last-line];
+  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 40% [row2-end] 20%[third-line] auto [last-line];
   width: 1500px;
   margin: 0 auto;
   height: 600px;
@@ -49,4 +49,13 @@
   height: 100%;
   object-fit: cover;
   margin: 0;
+}
+.second-container{
+  display: inline-grid;
+  grid-template-columns: [first] 25% [second] auto [end];
+  grid-column-start: line2;
+  grid-column-end: span five;
+  grid-row-start:3;
+  grid-row-end: span 2;
+  height: 30px;
 }
