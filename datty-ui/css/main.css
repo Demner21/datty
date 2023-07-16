@@ -1,7 +1,7 @@
 .main-container{
   display: grid;
   grid-template-columns: [first]25%[line2] 10% [line3] auto [line4] 10% [five] 25% [end];
-  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 40% [row2-end] 20%[third-line] auto [last-line];
+  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 60px [row2-end] 20%[third-line] 20px [last-line];
   width: 1500px;
   margin: 0 auto;
   height: 600px;
@@ -58,4 +58,29 @@
   grid-row-start:3;
   grid-row-end: span 2;
   height: 30px;
+}
+.third-container{
+  display: inline-grid;
+  grid-template-columns: [first]10%[line2] 20% [line3] 60% [line4]10% [end];
+  grid-column-start: line2;
+  grid-column-end: span five;
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  height: 50px;
+  width: auto;
+}
+.cell-third-text{
+  font-size: 2fr;
+  border: 1px solid #000;
+  text-align: left;
+  background-color: gray;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5%;
+  text-align: center;
+}
+.cell-third{
+}
+.cell-third-1{
 }
