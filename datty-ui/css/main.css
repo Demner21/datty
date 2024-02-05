@@ -1,4 +1,4 @@
-.main-container{
+.main-container {
   display: grid;
   grid-template-columns: [first] 10% [second] 15% [line2] 10% [line3] auto [line4] 10% [five] 15% [six]10% [end];
   grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 60px [row2-end] 20%[third-line] 20px [last-line];
@@ -6,6 +6,7 @@
   margin: 0 auto;
   height: 600px;
 }
+
 .container {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
@@ -15,27 +16,31 @@
   grid-row-end: span 2;
   height: 30px;
 }
+
 .cell {
   font-size: 2fr;
   border: 1px solid #000;
   text-align: left;
 }
+
 .cell:nth-child(odd) {
   background-color: gray;
   color: black;
   font-weight: bold;
 }
-.gallery__item--1{ 
+
+.gallery__item--1 {
   grid-column: line2 /span 1;
   grid-row: row1-start;
-  margin: 0 20;
 }
-.gallery__item--2{ 
+
+.gallery__item--2 {
   grid-column: line4 /span 1;
   grid-row: row1-start;
   margin-left: 0;
 }
-.item-center{
+
+.item-center {
   grid-column: line3 /span 1;
   grid-row: row1-start;
   font-size: 1vw;
@@ -45,23 +50,24 @@
 }
 
 .gallery__img {
-  width: 30;
   height: 100%;
   object-fit: cover;
   margin: 0;
 }
-.second-container{
+
+.second-container {
   display: inline-grid;
   grid-template-columns: [first] 25% [second] auto [end];
   grid-column-start: line2;
   grid-column-end: span five;
-  grid-row-start:3;
+  grid-row-start: 3;
   grid-row-end: span 2;
   height: 30px;
 }
-.third-container{
-  display: inline-grid;
-  grid-template-columns: [first]12%[line2] 18% [line3] 65% [line4]5% [end];
+
+.third-container {
+  display: grid;
+  grid-template-columns: [first]12%[line2] 18% [line3] 60% [line4]10% [end];
   grid-column-start: second;
   grid-column-end: span six;
   grid-row-start: 4;
@@ -69,21 +75,34 @@
   height: 80px;
   width: auto;
 }
-.cell-third-text{
+.third-container-inner {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: [row1-start] 50%  [row2-start] 50%;
+}
+
+.tci-inner-1{
+  display: inline-grid;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.cell-third-text {
   font-size: 2fr;
   border: 1px solid #000;
-  text-align: left;
   background-color: gray;
   color: black;
   font-weight: bold;
-  text-align: left;
   text-align: center;
 }
-.padding-top-5{
+
+.padding-top-5 {
   padding-top: 10%;
 }
-.padding-top-2{
+
+.padding-top-2 {
   padding-top: 1%;
 }
-.cell-third-1{
+
+.cell-third-1 {
 }
