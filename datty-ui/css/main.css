@@ -1,7 +1,7 @@
 .main-container {
   display: grid;
   grid-template-columns: [first] 10% [second] 15% [line2] 10% [line3] auto [line4] 10% [five] 15% [six]10% [end];
-  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 60px [row2-end] 20%[third-line] 20px [last-line];
+  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 60px [row2-end] 80px[third-line] 20px [last-line];
   width: 1600px;
   margin: 0 auto;
   height: 600px;
@@ -88,7 +88,7 @@
 }
 
 .cell-third-text {
-  font-size: 2fr;
+  font-size: small;
   border: 1px solid #000;
   background-color: gray;
   color: black;
@@ -104,5 +104,50 @@
   padding-top: 1%;
 }
 
-.cell-third-1 {
+.course-main-flex{
+  display: flex;
+  flex-direction: column;
+  grid-column-start: second;
+  grid-column-end: span six;
+}
+
+.course-main-item{
+  display: grid;
+  grid-template-columns: [first]12% [line2] 88% [end];
+}
+
+
+.course-main {
+  display: grid;
+  grid-template-columns: [first]12%[line2] 37% [end];
+  grid-column-start: second;
+  grid-column-end: span six;
+}
+
+.course-name{
+  font-size: x-small;
+  text-align: center;
+}
+
+.course-competencia-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.course-competencia-item{
+  display: grid;
+  grid-template-columns:[first]20.5% [line2] auto [end];
+}
+
+.competencia-name{
+}
+
+.course-grade-container{
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: [first] 21.4% [second] 21.4% [third] 21.4% [fourth] 21.4% [fifth] 14.5% [end];
+}
+
+
+.course-grade{
 }
