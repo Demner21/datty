@@ -1,7 +1,7 @@
 .main-container {
   display: grid;
   grid-template-columns: [first] 10% [second] 15% [line2] 10% [line3] auto [line4] 10% [five] 15% [six]10% [end];
-  grid-template-rows: [row1-start] 20% [row1-end] 80px [row2-start] 60px [row2-end] 80px[third-line] 20px [last-line];
+  grid-template-rows: [row1-start] 20% [row1-end] 13.5% [row2-start] 11% [row2-end] 13%[third-line]  auto [ third-line-end]20px [last-line];
   width: 1600px;
   margin: 0 auto;
   height: 600px;
@@ -90,10 +90,17 @@
 .cell-third-text {
   font-size: small;
   border: 1px solid #000;
-  background-color: gray;
   color: black;
   font-weight: bold;
   text-align: center;
+  background-color: white;
+}
+.bg-gray{
+  background-color: gray;
+}
+
+.bg-white{
+  background-color: white;
 }
 
 .padding-top-5 {
@@ -150,4 +157,17 @@
 
 
 .course-grade{
+}
+
+.grades-container{
+  display: grid;
+  grid-column-start: 4;
+  grid-template-columns: [first] 40% [end];
+  padding-left: 40%;
+}
+.grade-item{
+  display: flex;
+  flex-direction: row;
+  grid-column-end: span five;
+
 }
